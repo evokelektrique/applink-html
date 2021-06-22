@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>ﮐﻮﺗﺎﻩ ﮐﻨﻨﺪﻩ ﻟﯿﻨﮏ</title>
+
+	<!-- Bootstrap 4 -->
+	<link rel="stylesheet" type="text/css" href="../src/css/bootstrap-grid.min.css">
+	<link rel="stylesheet" type="text/css" href="../src/css/bootstrap.min.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- Icons -->
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+	<!-- Core Style -->
+	<link rel="stylesheet" type="text/css" href="../src/css/apexcharts.css">
+	<link rel="stylesheet" type="text/css" href="./dashboard.css">
+
+	<!-- Scripts -->
+	<script type="text/javascript" src="../src/js/jquery.min.js"></script>
+	<script type="text/javascript" src="../src/js/jquery-migrate-1.2.1.min.js"></script>
+	<script type="text/javascript" src="../src/js/feather.min.js"></script>
+	<script type="text/javascript" src="../src/js/script.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="../src/js/apexcharts.min.js"></script>
+
+</head>
+<body>
+
+	<!-- Nav -->
+	<header class="container-fluid position-relative shadow-sm">
+		<div class="row">
+			<nav class="navbar align-items-stretch p-0 w-100 navbar-light navbar-expand-lg bg-white">
+
+				<a href="#" class="col m-0 px-4 py-2 navbar-brand pull-left">
+					<!-- Logo Text -->
+					<img src="../src/images/alpha_on.png" width="45" alt="" class="d-inline-block align-middle mr-2">
+					<span class="font-weight-bold text-black px-1">اﭘﻠﯿﻨﮏ</span>
+					<div class="bg-white d-inline-block px-2 py-1 h6 rounded shadow-sm text-uppercase">1.0 ﻧﺴﺨﻪ</div>
+					<!-- Logo Image -->
+				</a>
+				<button type="button" data-toggle="collapse" data-target="#nvabar" aria-controls="nvabar" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div id="nvabar" class="col-md-10 px-4 py-2 bg-white collapse navbar-collapse">
+					<ul class="col-5 justify-content-center px-0 navbar-nav mr-auto">
+						<li class="nav-item"><a class="nav-link">ﮐﻮﺗﺎﻩ ﮐﻨﻨﺪﻩ ﻟﯿﻨﮏ</a></li>
+						<li class="nav-item"><a href="#" class="nav-link">ﺗﻤﺎﺱ ﺑﺎ ﻣﺎ</a></li>
+						<li class="nav-item cash-stat">
+							<div class="ml-2 btn-group" role="group" aria-label="wallet">
+								<a href="#" class="btn btn-warning"><i class="fas fa-money-check-alt mr-2 fa-lg align-middle"></i>کیف پول</a>
+								<a href="#" class="btn btn-outline-warning">10000 ریال</a>
+							</div>
+						</li>
+					</ul>
+					<div class="input-group px-0 col">
+						<input type="text" class="form-control" placeholder="لینکتو کوتاه کن ..." aria-label="لینکتو کوتاه کن ..." aria-describedby="button-addon2">
+						<div class="input-group-append">
+							<button class="btn btn-success" type="button" id="button-addon2">کوتاه کن</button>
+						</div>
+  					</div>
+				</div>
+			</nav>
+		</div>
+	</header>   
+
+	<!-- Wrapper -->
+	<div class="container-fluid  h-100">
+
+
+		<div class="row justify-content-start h-100 dashboard">
+			<!-- Sidebar -->
+			<div class="col-md-2 menu d-flex flex-direction-column bg-white p-0 shadow-sm position-relative">
+
+				<ul id="menu" class="accordion pb-5 mb-5">
+
+					<li>
+						<a class="menu-header-item d-flex">
+							<div class="col-md-10">
+						<i class="fas fa-align-justify pr-2"></i>
+						داشبورد
+							</div>
+						</a>
+
+					</li>
+					<li>
+						<div class="collapsed" data-toggle="collapse" href="#menu-1">
+							<a class="menu-header-item d-flex">
+								<div class="col-md-10">
+									<i class="fas fa-link pr-2"></i>
+									لینک کوتاه 
+								</div>
+								<div class="col">
+									<i class="fas fa-caret-down"></i>
+								</div>
+							</a>
+						</div>
+						<div id="menu-1" class="collapse" data-parent="#menu-1" >
+							<div class="submenu">
+								<a href="#">کوتاه کردن لینک</a>
+								<a href="#">فهرست لینک های شما</a>
+								<a href="#">لینک آسان</a>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="collapsed" data-toggle="collapse" href="#menu-2">
+							<a class="menu-header-item d-flex">
+								<div class="col-md-10">
+									<i class="fas fa-text-width pr-2"></i>
+									متن کوتاه
+								</div>
+								<div class="col">
+									<i class="fas fa-caret-down"></i>
+
+								</div>
+							</a>
+						</div>
+						<div id="menu-2" class="collapse" data-parent="#menu-2" >
+							<div class="submenu">
+								<a href="#">کوتاه کردن متن</a>
+								<a href="#">فهرست متن های شما</a>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="collapsed" data-toggle="collapse" href="#menu-3">
+							<a class="menu-header-item d-flex">
+								<div class="col-md-10">
+									<i class="fas fa-money-check-alt pr-2"></i>
+									امور مالی
+								</div>
+								<div class="col">
+									<i class="fas fa-caret-down"></i>
+
+								</div>
+							</a>
+						</div>
+						<div id="menu-3" class="collapse" data-parent="#menu-3" >
+							<div class="submenu">
+								<a href="#">درخواست واریز</a>
+								<a href="#">تراکنش های مالی</a>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="collapsed" data-toggle="collapse" href="#menu-4">
+							<a class="menu-header-item d-flex">
+								<div class="col-md-10">
+									<i class="fas fa-users pr-2"></i>
+									زیر مجموعه ها
+								</div>
+								<div class="col">
+									<i class="fas fa-caret-down"></i>
+
+								</div>
+							</a>
+						</div>
+						<div id="menu-4" class="collapse" data-parent="#menu-4" >
+							<div class="submenu">
+								<a href="#">زیرمجموعه های شما</a>
+								<a href="#">جذب زیرمجموعه</a>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="collapsed" data-toggle="collapse" href="#menu-5">
+							<a class="menu-header-item d-flex">
+								<div class="col-md-10">
+									<i class="fas fa-user pr-2"></i>
+									پروفایل
+								</div>
+								<div class="col">
+									<i class="fas fa-caret-down"></i>
+
+								</div>
+							</a>
+						</div>
+						<div id="menu-5" class="collapse" data-parent="#menu-5" >
+							<div class="submenu">
+								<a href="#">ویرایش اطلاعات کاربری</a>
+								<a href="#">تغییر کلمه عبور</a>
+								<a href="#">خروج</a>
+							</div>
+						</div>
+					</li>
+				</ul>
+				<div class="col align-self-end copyright text-center">
+					<small class="text-muted">&copy;&nbsp;تمامی حقوق  کپی رایت محفوظ می باشد</small>
+					<a href="https://t.me/evoke" class="btn btn-sm btn-light w-100 mt-2">طراحی و توسعه توسط EVOKE@</a>
+				</div>
+			</div>
+			<!-- Content -->
+			<div class="col-md-10 bg-transparent py-4" id="content">
+
+				<div class="row px-4 py-4 align-items-center text-muted">
+					<i class="fas fa-th-large fa-lg"></i>
+					<h5 class="m-0 px-2 font-weight-bold">داشبورد</h5>
+				</div>
+
+				<!-- Stats -->
+				<div class="container-fluid">
+					<div class="row px-0 justify-content-center dashboard-stats">
+						<div class="col-md-3 col-sm-6 col-xs-12 mb-2 m-0 px-1">
+							<div class="text-white text-center light px-4 py-2 rounded dashboard-stat-box bg-white shadow-lg">
+								<h5 class="py-2 pt-4">موجودی حساب</h5>
+								<h4 class="py-2 font-weight-bold">34,100 ریال</h4>
+								<a href="#" class="text-white pt-2 pb-1 d-block">+ درخواست واریزوجه</a>
+							</div>
+						</div>
+						<div class="col-md-3 col-sm-6 col-xs-12 mb-2 m-0 px-1">
+							<div class="text-white text-center px-4 py-2 rounded dashboard-stat-box dark bg-white shadow-lg">
+								<h5 class="py-2 pt-4">موجودی حساب</h5>
+								<h4 class="py-2 font-weight-bold">34,100 ریال</h4>
+								<a href="#" class="text-white pt-2 pb-1 d-block">+ درخواست واریزوجه</a>
+							</div>
+						</div>
+						<div class="col-md-3 col-sm-6 col-xs-12 mb-2 m-0 px-1">
+							<div class="text-white text-center px-4 py-2 rounded dashboard-stat-box dark bg-white shadow-lg">
+								<h5 class="py-2 pt-4">موجودی حساب</h5>
+								<h4 class="py-2 font-weight-bold">34,100 ریال</h4>
+								<a href="#" class="text-white pt-2 pb-1 d-block">+ درخواست واریزوجه</a>
+							</div>
+						</div>
+						<div class="col-md-3 col-sm-6 col-xs-12 mb-2 m-0 px-1">
+							<div class="text-white text-center px-4 py-2 rounded dashboard-stat-box dark bg-white shadow-lg">
+								<h5 class="py-2 pt-4">موجودی حساب</h5>
+								<h4 class="py-2 font-weight-bold">34,100 ریال</h4>
+								<a href="#" class="text-white pt-2 pb-1 d-block">+ درخواست واریزوجه</a>	
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- Chart -->
+				<div class="row mx-1 align-items-center">
+					<div class="col-md-12 px-0">
+						<div class=" p-4 bg-white rounded shadow-lg">
+							<h6 class="font-weight-bold align-middle my-0 py-2 text-muted"><i class="fas fa-chart-bar pr-2 fa-lg font-weight-normal"></i>درآمد این ماه شما</h6>
+							<div id="chart" style="direction: ltr; width: 100%; height: 100px;"></div>
+							<script type="text/javascript">
+							var options = {
+								chart: {
+									type: 'bar',
+							    		// stacked: true,
+							    		height: 250,
+							    		toolbar: {
+							    			show: false,
+							    		},
+							    		// foreColor: '#373d3f'
+
+							    	},
+
+							    	series: [{
+							    		name: 'درآمد لینک',
+							    		data: [
+							    		{ x: '05/01/2014', y: 4 }, 
+							    		{ x: '05/02/2015', y:99  },
+							    		{ x: '05/03/2016', y:  77},
+							    		{ x: '05/04/2017', y: 55 },
+							    		{ x: '05/05/2018', y:  44 },
+							    		{ x: '05/12/2019', y: 77 },		
+							    		{ x: '05/06/2014', y:  22}, 
+							    		{ x: '05/08/2015', y:  77},
+							    		{ x: '05/09/2016', y:  11},
+							    		{ x: '05/10/2017', y:  71},
+							    		{ x: '05/11/2018', y: 12 },
+							    		{ x: '05/12/2019', y:  52},		
+							    		{ x: '05/06/2014', y: 6 }, 
+							    		{ x: '05/08/2015', y:  22},
+							    		{ x: '05/09/2016', y:  88},
+							    		{ x: '05/10/2017', y:  98},
+							    		{ x: '05/11/2018', y:  64},
+							    		{ x: '05/12/2019', y:  2},		
+							    		{ x: '05/06/2014', y:  1}, 
+							    		{ x: '05/08/2015', y:  8},
+							    		{ x: '05/09/2016', y:  0},
+							    		{ x: '05/10/2017', y:  8},
+							    		{ x: '05/11/2018', y:  1},
+							    		{ x: '05/12/2019', y:  5},		
+							    		{ x: '05/06/2014', y:  6}, 
+							    		{ x: '05/08/2015', y:  82},
+							    		{ x: '05/09/2016', y:  64},
+							    		{ x: '05/10/2017', y:  21},
+							    		{ x: '05/11/2018', y:  24},
+							    		{ x: '05/12/2019', y:  12},		
+							    		]},{
+							    			name: 'درآمد متن',
+							    			data: [
+							    			{ x: '05/01/2014', y: 66 }, 
+							    			{ x: '05/02/2015', y:22  },
+							    			{ x: '05/03/2016', y:  22},
+							    			{ x: '05/04/2017', y: 88 },
+							    			{ x: '05/05/2018', y:  22 },
+							    			{ x: '05/12/2019', y: 75 },		
+							    			{ x: '05/06/2014', y:  88}, 
+							    			{ x: '05/08/2015', y:  44},
+							    			{ x: '05/09/2016', y:  77},
+							    			{ x: '05/10/2017', y:  66},
+							    			{ x: '05/11/2018', y: 44 },
+							    			{ x: '05/12/2019', y:  52},		
+							    			{ x: '05/06/2014', y: 6 }, 
+							    			{ x: '05/08/2015', y:  22},
+							    			{ x: '05/09/2016', y:  88},
+							    			{ x: '05/10/2017', y:  98},
+							    			{ x: '05/11/2018', y:  64},
+							    			{ x: '05/12/2019', y:  66},		
+							    			{ x: '05/06/2014', y:  1}, 
+							    			{ x: '05/08/2015', y:  44},
+							    			{ x: '05/09/2016', y:  0},
+							    			{ x: '05/10/2017', y:  33},
+							    			{ x: '05/11/2018', y:  22},
+							    			{ x: '05/12/2019', y:  5},		
+							    			{ x: '05/06/2014', y:  11}, 
+							    			{ x: '05/08/2015', y:  82},
+							    			{ x: '05/09/2016', y:  64},
+							    			{ x: '05/10/2017', y:  21},
+							    			{ x: '05/11/2018', y:  24},
+							    			{ x: '05/12/2019', y:  77},		
+							    			]},{
+							    				name: 'درآمد زیرمجموعه',
+							    				data: [
+							    				{ x: '05/01/2014', y: 11 }, 
+							    				{ x: '05/02/2015', y:22  },
+							    				{ x: '05/03/2016', y:  13},
+							    				{ x: '05/04/2017', y: 18 },
+							    				{ x: '05/05/2018', y:  82 },
+							    				{ x: '05/12/2019', y: 75 },		
+							    				{ x: '05/06/2014', y:  31}, 
+							    				{ x: '05/08/2015', y:  67},
+							    				{ x: '05/09/2016', y:  83},
+							    				{ x: '05/10/2017', y:  71},
+							    				{ x: '05/11/2018', y: 15 },
+							    				{ x: '05/12/2019', y:  52},		
+							    				{ x: '05/06/2014', y: 6 }, 
+							    				{ x: '05/08/2015', y:  22},
+							    				{ x: '05/09/2016', y:  88},
+							    				{ x: '05/10/2017', y:  98},
+							    				{ x: '05/11/2018', y:  64},
+							    				{ x: '05/12/2019', y:  2},		
+							    				{ x: '05/06/2014', y:  8}, 
+							    				{ x: '05/08/2015', y:  9},
+							    				{ x: '05/09/2016', y:  0},
+							    				{ x: '05/10/2017', y:  8},
+							    				{ x: '05/11/2018', y:  1},
+							    				{ x: '05/12/2019', y:  2},		
+							    				{ x: '05/06/2014', y:  6}, 
+							    				{ x: '05/08/2015', y:  33},
+							    				{ x: '05/09/2016', y:  64},
+							    				{ x: '05/10/2017', y:  55},
+							    				{ x: '05/11/2018', y:  77},
+							    				{ x: '05/12/2019', y:  22},		
+							    				]},
+							    				],
+
+							    				xaxis: {
+
+							    					labels: {
+							    						formatter: function (value, timestamp) {
+							    							return new Date(timestamp).getDate();
+							    						}, 
+							    						style: {
+							    							colors: [],
+							    							fontSize: '12px',
+							    							fontFamily: 'Vazir-FD',
+							    							cssClass: 'apexcharts-xaxis-label',
+							    						},
+							    					},
+							    					axisBorder: {
+							    						show: true,
+							    						color: '#aaa',
+							    						height: 0.3,
+							    						width: '100%',
+							    						opacity: 1,
+							    						offsetX: 0,
+							    						offsetY: 0
+							    					},
+							    				},
+							    				colors: ["#2dcaab", "#73eba1", "#ff9c1d"],
+							yaxis: {
+							show: false,
+							    		// labels: {
+							    			// formatter: function (value, timestamp) {
+							  // return new Date(timestamp).getDate(); // The formatter function overrides format property
+
+							},
+
+							grid: {
+								show: false,
+							},
+							dataLabels: {
+								enabled: false,
+								offsetX: 0,
+								offsetY: -20,
+								style: {
+									fontSize: '13px',
+									fontFamily: 'Vazir-FD',
+									colors: ["#000"]
+								},
+							},
+							plotOptions: {
+
+								bar: {
+									columnWidth: "66%",
+									dataLabels: {
+										position: 'top',
+									}
+								},
+								dataLabels: {
+									enabled: true,
+									dropShadow: {
+										enabled: true,
+										left: 0,
+										top: 0,
+										opacity: 0.5
+									}
+								},
+							},
+							stroke: {
+								show: true,
+								curve: 'smooth',
+								lineCap: 'butt',
+								colors: undefined,
+								width: 0,
+								dashArray: 0,      
+							},
+							tooltip: {
+								x: {show: false},
+								style: {
+									fontSize: '13px',
+									fontFamily: "Vazir-FD",
+								},
+							},
+							legend: {
+								show: true,
+								showForSingleSeries: false,
+								showForNullSeries: true,
+								showForZeroSeries: true,
+								position: 'bottom',
+								horizontalAlign: 'center', 
+								floating: false,
+								fontSize: '13px',
+								fontFamily: 'Vazir-FD',
+								formatter: undefined,
+								inverseOrder: false,
+								width: undefined,
+								height: undefined,
+								tooltipHoverFormatter: undefined,
+								offsetX: 0,
+								offsetY: 0,
+								labels: {
+									colors: undefined,
+									useSeriesColors: false
+								},
+								markers: {
+									width: 12,
+									height: 12,
+									strokeWidth: 0,
+									strokeColor: '#fff',
+									fillColors: undefined,
+									radius: 4,
+									customHTML: undefined,
+									onClick: undefined,
+									offsetX: 0,
+									offsetY: 0
+								},
+								itemMargin: {
+									horizontal: 20,
+									vertical: 5
+								},
+								onItemClick: {
+									toggleDataSeries: true
+								},
+								onItemHover: {
+									highlightDataSeries: true
+								},
+							}
+							}
+							var chart = new ApexCharts(document.querySelector("#chart"), options);
+							chart.render();
+							</script>
+						</div>
+					</div>
+				</div>
+
+				<div class="container-fluid">
+					<!-- Messages -->
+					<div class="row px-0 mt-2 justify-content-center dashboard-stats text-center">
+						<div class="col-md-4 col-sm-12 col-xs-12 mb-2 m-0 px-1">
+							<div class="text-black bg-white shadow-sm text-left px-4 py-2 rounded">
+								<h6 class="font-weight-bold my-0 py-2"><i class="fas fa-bolt
+									fa-lg pr-2"></i>دسترسی سریع</h6>
+									<div class="btn-group-vertical mt-3  w-100" role="group" aria-label="Basic example">
+										<a href="#" class="btn text-secondary text-left px-3 py-2"><i class="fas fa-hand-holding-usd mr-2"></i>کسب درآمد</a>
+										<a href="#" class="btn text-secondary text-left px-3 py-2"><i class="fas fa-list-ul mr-2"></i>فهرست لینک ها</a>
+										<a href="#" class="btn text-secondary text-left px-3 py-2"><i class="fas fa-layer-group mr-2"></i>کوتاه کردن گروهی لینک ها</a>
+										<a href="#" class="btn text-secondary text-left px-3 py-2"><i class="fas fa-user-cog mr-2"></i>ویرایش اطلاعات کاربری</a>
+
+									</div>
+									<a href="#" class="btn btn-danger text-left px-3 py-1 w-100"><i class="fas fa-sign-out-alt mr-2"></i>خروج</a>
+							</div>
+						</div>
+
+						<div class="col-md-4 col-sm-12 col-xs-12 mb-2 m-0 px-1">
+							<div class="text-white bg-dark shadow-sm text-left px-3 py-2 rounded">
+								<h6 class="font-weight-bold my-0 py-2"><i class="fas fa-newspaper fa-lg font-weight-normal pr-2"></i>آخرین اخبار</h6>
+								<div class="table-responsive">
+									<table class="table table-lg table-dark rounded mt-2 table-borderless table-hover">
+										<thead>
+											<tr>
+												<th scope="col" class="font-weight-bold">عنوان</th>
+												<th scope="col" class="font-weight-bold">تاریخ</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<th scope="row" class="font-weight-normal"><a class="text-white" href="#">اطلاعیه در خصوص دامنه های جدید</a></th>
+												<td>22 مرداد 1398	</td>
+											</tr>
+											<tr>
+												<th scope="row" class="font-weight-normal"><a class="text-white" href="#">اطلاعیه در خصوص دامنه های جدید</a></th>
+												<td>22 مرداد 1398	</td>
+											</tr>
+											<tr>
+												<th scope="row" class="font-weight-normal"><a class="text-white" href="#">اطلاعیه در خصوص دامنه های جدید</a></th>
+												<td>22 مرداد 1398	</td>
+											</tr>
+											<tr>
+												<th scope="row" class="font-weight-normal"><a class="text-white" href="#">اطلاعیه در خصوص دامنه های جدید</a></th>
+												<td>22 مرداد 1398	</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+
+						<div class="col-md-4 col-sm-12 col-xs-12 mb-2 m-0 px-1">
+							<div class="text-black bg-white shadow-sm text-left px-3 py-2 rounded">
+								<h6 class="font-weight-bold my-0 py-2"><i class="fas fa-envelope fa-lg font-weight-normal pr-2"></i>آخرین پیام ها <a href="#" class="badge display-inline badge-info">4</a></h6>
+								<div class="table-responsive">
+									<table class="table table-lg table-light rounded mt-2 table-borderless table-hover">
+										<thead>
+											<tr>
+												<th scope="col" class="font-weight-bold">عنوان</th>
+												<th scope="col" class="font-weight-bold">تاریخ</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<th scope="row" class="font-weight-normal"><a class="" href="#">اطلاعیه در خصوص دامنه های جدید</a></th>
+												<td>22 مرداد 1398	</td>
+											</tr>
+											<tr>
+												<th scope="row" class="font-weight-normal"><a class="" href="#">اطلاعیه در خصوص دامنه های جدید</a></th>
+												<td>22 مرداد 1398	</td>
+											</tr>
+											<tr>
+												<th scope="row" class="font-weight-normal"><a class="" href="#">اطلاعیه در خصوص دامنه های جدید</a></th>
+												<td>22 مرداد 1398	</td>
+											</tr>
+											<tr>
+												<th scope="row" class="font-weight-normal"><a class="" href="#">اطلاعیه در خصوص دامنه های جدید</a></th>
+												<td>22 مرداد 1398	</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+
+
+					</div>
+				</div>
+
+
+			</div>
+		</div>
+	</div>
+
+
+
+</body>
+</html>

@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>ﮐﻮﺗﺎﻩ ﮐﻨﻨﺪﻩ ﻟﯿﻨﮏ</title>
+
+	<!-- Bootstrap 4 -->
+	<link rel="stylesheet" type="text/css" href="../src/css/bootstrap-grid.min.css">
+	<link rel="stylesheet" type="text/css" href="../src/css/bootstrap.min.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- Icons -->
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+	<!-- Core Style -->
+	<link rel="stylesheet" type="text/css" href="../src/css/apexcharts.css">
+	<link rel="stylesheet" type="text/css" href="./dashboard.css">
+
+	<!-- Scripts -->
+	<script type="text/javascript" src="../src/js/jquery.min.js"></script>
+	<script type="text/javascript" src="../src/js/jquery-migrate-1.2.1.min.js"></script>
+	<script type="text/javascript" src="../src/js/feather.min.js"></script>
+	<script type="text/javascript" src="../src/js/script.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="../src/js/apexcharts.min.js"></script>
+
+</head>
+<body>
+
+	<!-- Nav -->
+	<header class="container-fluid position-relative shadow-sm">
+		<div class="row">
+			<nav class="navbar align-items-stretch p-0 w-100 navbar-light navbar-expand-lg bg-white">
+
+				<a href="#" class="col m-0 px-4 py-2 navbar-brand pull-left">
+					<!-- Logo Text -->
+					<img src="../src/images/alpha_on.png" width="45" alt="" class="d-inline-block align-middle mr-2">
+					<span class="font-weight-bold text-black px-1">اﭘﻠﯿﻨﮏ</span>
+					<div class="bg-white d-inline-block px-2 py-1 h6 rounded shadow-sm text-uppercase">1.0 ﻧﺴﺨﻪ</div>
+					<!-- Logo Image -->
+				</a>
+				<button type="button" data-toggle="collapse" data-target="#nvabar" aria-controls="nvabar" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div id="nvabar" class="col-md-10 px-4 py-2 bg-white collapse navbar-collapse">
+					<ul class="col-5 justify-content-center px-0 navbar-nav mr-auto">
+						<li class="nav-item"><a class="nav-link">ﮐﻮﺗﺎﻩ ﮐﻨﻨﺪﻩ ﻟﯿﻨﮏ</a></li>
+						<li class="nav-item"><a href="#" class="nav-link">ﺗﻤﺎﺱ ﺑﺎ ﻣﺎ</a></li>
+						<li class="nav-item cash-stat">
+							<div class="ml-2 btn-group" role="group" aria-label="wallet">
+								<a href="#" class="btn btn-warning"><i class="fas fa-money-check-alt mr-2 fa-lg align-middle"></i>کیف پول</a>
+								<a href="#" class="btn btn-outline-warning">10000 ریال</a>
+							</div>
+						</li>
+					</ul>
+					<div class="input-group px-0 col">
+						<input type="text" class="form-control" placeholder="لینکتو کوتاه کن ..." aria-label="لینکتو کوتاه کن ..." aria-describedby="button-addon2">
+						<div class="input-group-append">
+							<button class="btn btn-success" type="button" id="button-addon2">کوتاه کن</button>
+						</div>
+					</div>
+				</div>
+			</nav>
+		</div>
+	</header>   
+
+	<!-- Wrapper -->
+	<div class="container-fluid  h-100">
+
+
+		<div class="row justify-content-start h-100 dashboard">
+			<!-- Sidebar -->
+			<div class="col-md-2 menu d-flex flex-direction-column bg-white p-0 shadow-sm position-relative">
+
+				<ul id="menu" class="accordion pb-5 mb-5">
+
+					<li>
+						<a class="menu-header-item d-flex">
+							<div class="col-md-10">
+						<i class="fas fa-align-justify pr-2"></i>
+						داشبورد
+							</div>
+						</a>
+
+					</li>
+					<li>
+						<div class="collapsed" data-toggle="collapse" href="#menu-1">
+							<a class="menu-header-item d-flex">
+								<div class="col-md-10">
+									<i class="fas fa-link pr-2"></i>
+									لینک کوتاه 
+								</div>
+								<div class="col">
+									<i class="fas fa-caret-down"></i>
+								</div>
+							</a>
+						</div>
+						<div id="menu-1" class="collapse" data-parent="#menu-1" >
+							<div class="submenu">
+								<a href="#">کوتاه کردن لینک</a>
+								<a href="#">فهرست لینک های شما</a>
+								<a href="#">لینک آسان</a>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="collapsed" data-toggle="collapse" href="#menu-2">
+							<a class="menu-header-item d-flex">
+								<div class="col-md-10">
+									<i class="fas fa-text-width pr-2"></i>
+									متن کوتاه
+								</div>
+								<div class="col">
+									<i class="fas fa-caret-down"></i>
+
+								</div>
+							</a>
+						</div>
+						<div id="menu-2" class="collapse" data-parent="#menu-2" >
+							<div class="submenu">
+								<a href="#">کوتاه کردن متن</a>
+								<a href="#">فهرست متن های شما</a>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="collapsed" data-toggle="collapse" href="#menu-3">
+							<a class="menu-header-item d-flex">
+								<div class="col-md-10">
+									<i class="fas fa-money-check-alt pr-2"></i>
+									امور مالی
+								</div>
+								<div class="col">
+									<i class="fas fa-caret-down"></i>
+
+								</div>
+							</a>
+						</div>
+						<div id="menu-3" class="collapse" data-parent="#menu-3" >
+							<div class="submenu">
+								<a href="#">درخواست واریز</a>
+								<a href="#">تراکنش های مالی</a>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="collapsed" data-toggle="collapse" href="#menu-4">
+							<a class="menu-header-item d-flex">
+								<div class="col-md-10">
+									<i class="fas fa-users pr-2"></i>
+									زیر مجموعه ها
+								</div>
+								<div class="col">
+									<i class="fas fa-caret-down"></i>
+
+								</div>
+							</a>
+						</div>
+						<div id="menu-4" class="collapse" data-parent="#menu-4" >
+							<div class="submenu">
+								<a href="#">زیرمجموعه های شما</a>
+								<a href="#">جذب زیرمجموعه</a>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="collapsed" data-toggle="collapse" href="#menu-5">
+							<a class="menu-header-item d-flex">
+								<div class="col-md-10">
+									<i class="fas fa-user pr-2"></i>
+									پروفایل
+								</div>
+								<div class="col">
+									<i class="fas fa-caret-down"></i>
+
+								</div>
+							</a>
+						</div>
+						<div id="menu-5" class="collapse" data-parent="#menu-5" >
+							<div class="submenu">
+								<a href="#">ویرایش اطلاعات کاربری</a>
+								<a href="#">تغییر کلمه عبور</a>
+								<a href="#">خروج</a>
+							</div>
+						</div>
+					</li>
+				</ul>
+				<div class="col align-self-end copyright text-center">
+					<small class="text-muted">&copy;&nbsp;تمامی حقوق  کپی رایت محفوظ می باشد</small>
+					<a href="https://t.me/evoke" class="btn btn-sm btn-light w-100 mt-2">طراحی و توسعه توسط EVOKE@</a>
+				</div>
+			</div>
+			<!-- Content -->
+			<div class="col-md-10 bg-transparent py-4" id="content">
+
+				<!-- <div class="row px-4 py-4 align-items-center text-muted"> -->
+					<!-- <i class="align-middle fas fa-link fa-lg"></i> -->
+					<!-- <h5 class="m-0 px-2 font-weight-bold">کوتاه کردن لینک</h5> -->
+					<!-- </div> -->
+
+					<!-- Chart -->
+					<div class="row mx-1 mt-3 align-items-center">
+						<div class="col-md-12 px-0">
+<!-- 							<div class="shadow-sm alert alert-warning border-warning" role="alert">
+								<strong>هشدار: </strong> اطلاعات اکانت شما کامل نمی باشد. برای ثبت درخواست واریز باید تمام اطلاعات را درست و کامل وارد کنید.
+								<a href="#" class="btn btn-sm btn-secondary border-dark ml-2">ویرایش اطلاعات</a>
+							</div>							
+ -->							<div class="card noborder bg-white rounded shadow-sm">
+								<div class="card-header bg-white font-weight-bold"><i class="align-middle fas fa-user-cog mr-2"></i>ویرایش تنظیمات و اطلاعات کاربری</div>
+								<div class="card-body text-secondary p-4">
+<div class="alert alert-danger" role="alert">
+<strong class="d-block pb-2">هشدار: </strong>
+حساب بانکی باید به نام خود شما باشد، در غیر اینصورت تسویه حساب انجام نخواهد شد. <br>
+در صورتی که نمیدانید شبا چیست و یا شبای حساب خود را چگونه میتوانید دریافت کنید، <a href="#" class="alert-link">اینجا</a> کلیک کنید. <br>
+در صورت لزوم میتوانید شبای حساب خود را بعدا وارد نمایید.
+</div>
+									<form>
+										<div class="form-row">
+											<div class="col-md-12">
+<div class="input-group mb-4 col-md-12 mx-auto px-0">
+    <div class="input-group-prepend">
+        <div class="input-group-text"style="min-width: 140px">ایمیل</div>
+    </div>
+    <input type="text" value="evoke.lektrique@gmail.com" disabled class="form-control" placeholder="ایمیل">
+    <div class="invalid-feedback order-last ">
+        نامعتبر
+    </div>
+    <div class="input-group-append">
+        <div class="input-group-text" style="font-family: roboto;" >@</div>
+    </div>
+</div>
+<small class="form-text text-muted d-block mb-2" style="clear: both;">
+<span class="badge badge-warning border border-dark font-weight-normal mr-1" style="font-size: 11px;">نکته</span> نام و نام خانوادگی فارسی و کامل صاحب حساب(در صورت ارسال نام به انگلیسی یا بصورت ناقص ، پرداخت با مشکل روبرو خواهد شد)
+</small>	
+<div class="input-group mb-4 col-md-12 mx-auto px-0">
+    <div class="input-group-prepend">
+        <div class="input-group-text"style="min-width: 140px">نام و نام خانوادگی</div>
+    </div>
+    <input type="text" value="" class="form-control" placeholder="نام و نام خانوادگی *">
+    <div class="invalid-feedback order-last ">
+        نامعتبر
+    </div>
+    <div class="input-group-append">
+        <div class="input-group-text"><i class="fas fa-user"></i></div>
+    </div>
+</div>
+
+<small class="form-text text-muted d-block mb-2" style="clear: both;">
+<span class="badge badge-info border border-primary font-weight-normal mr-1" style="font-size: 11px;">مثال</span>09101234567
+</small>		
+<div class="input-group mb-4 col-md-12 mx-auto px-0">
+    <div class="input-group-prepend">
+        <div class="input-group-text"style="min-width: 140px">تلفن همراه</div>
+    </div>
+    <input type="text" value="" class="form-control" placeholder="تلفن همراه *">
+    <div class="invalid-feedback order-last ">
+        نامعتبر
+    </div>
+    <div class="input-group-append">
+        <div class="input-group-text"><i class="fas fa-mobile-alt"></i></div>
+    </div>
+</div>			
+
+<small class="form-text text-muted d-block mb-2" style="clear: both;">
+<span class="badge badge-info border border-primary font-weight-normal mr-1" style="font-size: 11px;">مثال</span>IR01 1234 5678 0123 4567 8901 23
+</small>
+<div class="input-group mb-4 col-md-12 mx-auto px-0">
+    <div class="input-group-prepend">
+        <div class="input-group-text"style="min-width: 140px">شماره حساب بانکی</div>
+    </div>
+    <input type="text" value="" style="font-family: roboto;" class="is-invalid form-control text-right">
+    <div class="invalid-feedback order-last ">
+        نامعتبر
+    </div>
+    <div class="input-group-append">
+        <div class="input-group-text" style="font-family: roboto;" >IR</div>
+    </div>
+</div>
+												<button class="btn shadow-sm btn-success">ثبت تغییرات</button>
+											</div>
+										</div>
+									</form>
+								</div>
+
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+
+
+
+	</body>
+	</html>
